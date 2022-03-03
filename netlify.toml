@@ -1,0 +1,8 @@
+[build]
+# Production context: all deploys from the Production branch 
+# set in your site’s Branches settings in the UI
+# will inherit these settings.
+[context.production]
+
+  environment = { ACCESS_TOKEN = "super secret", BASE_URL = "https://social-network-server-react.herokuapp.com"}
+
