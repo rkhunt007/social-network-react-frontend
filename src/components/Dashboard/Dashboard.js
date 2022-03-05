@@ -10,7 +10,7 @@ class Dashboard extends React.Component {
     return (
       <Fragment>
         <Header></Header>
-        <div className="container">
+        <div className="container py-2">
           <Route path={`${path}`} exact component={Home}></Route>
           <Route path={`${path}/profile`} exact component={Profile}></Route>
         </div>

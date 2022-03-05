@@ -5,7 +5,11 @@ import { connect } from "react-redux";
 const PrivateRoute = (props) => {
   const condition = props.auth.loggedIn;
 
-  return condition ? <Route path={props.path} component={props.component} {...props} /> : <Redirect to="/" />;
+  return condition ? (
+    <Route path={props.path} component={props.component} {...props} />
+  ) : (
+    <Redirect to="/" />
+  );
 };
 
 const mapStateToProps = (state) => {

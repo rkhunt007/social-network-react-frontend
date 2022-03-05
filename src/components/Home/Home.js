@@ -8,7 +8,7 @@ class Home extends React.Component {
   }
 
   addDefaultSrc(ev) {
-    ev.target.src = "https://source.unsplash.com/user/erondu";
+    ev.target.src = `${process.env.REACT_APP_BASE_URL}/user.png`;
   }
 
   renderUsers = () => {
@@ -26,7 +26,8 @@ class Home extends React.Component {
               <h5 className="card-title mb-1 text-break">{user.name}</h5>
               <p className="card-text mb-0 text-break">{user.email}</p>
               <p className="card-text mb-0 text-break">
-                <small className="text-muted"></small>Joined {format(new Date(user.date), "MMMM do, yyyy")}
+                <small className="text-muted"></small>Joined{" "}
+                {format(new Date(user.date), "MMMM do, yyyy")}
               </p>
               <div className="d-grid my-2">
                 <button className="btn btn-outline-primary">Add Friend</button>
@@ -40,7 +41,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="py-2">
+      <div>
         <p className="fs-3">Welcome {this.props.auth.user.name}</p>
 
         {/* Add friend requests here */}

@@ -1,8 +1,6 @@
 import axios from "axios";
-console.log("process.env", process.env);
 const instance = axios.create({
-  baseURL: "https://social-network-server-react.herokuapp.com",
-  // baseURL: "http://localhost:5000",
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 const token = localStorage.getItem("token", "");

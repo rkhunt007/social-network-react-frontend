@@ -1,0 +1,18 @@
+.profile-container {
+  width: 100%;
+  display: flex;
+}
+
+.img-wrapper {
+  flex: 0.2;
+}
+
+.info-wrapper {
+  flex: 0.8;
+}
+
+.user-img {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+}
